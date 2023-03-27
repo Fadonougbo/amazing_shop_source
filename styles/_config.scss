@@ -1,0 +1,28 @@
+:root 
+{
+
+    --globale-color:#2c2fd8fd;
+    --globale_color_with_opacity:rgba(44, 47, 216, 0.377);
+}
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    a 
+    {
+        text-decoration: none;
+    }
+
+    li 
+    {
+        list-style: none;
+    }
+}
+
+html 
+{
+    font-size: 62.5%;
+}

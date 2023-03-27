@@ -1,0 +1,27 @@
+@use "counter";
+@use "seach";
+@use "navigation";
+
+header 
+{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+
+    #head 
+    {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #head #logo span 
+    {
+        color: var(--globale-color);
+        text-transform: capitalize;
+        font-size:2.8rem;
+    }
+}

@@ -1,0 +1,12 @@
+tache 
+
+change les icones de la partie categorie
+
+
+objectif
+
+utilisé react-router-dom
+utilisé un lib de slider
+utilisé redux
+créé un systeme de recherche
+utilise react icon

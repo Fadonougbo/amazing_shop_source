@@ -1,0 +1,16 @@
+{
+    "categories":[
+        {
+            "name":"Fashion",
+            "img":"cat1.png"
+        },
+        {
+            "name":"Electronic",
+            "img":"cat2.png"
+        },
+        {
+            "name":"Others",
+            "img":"cat10.png"
+        }
+    ]
+}

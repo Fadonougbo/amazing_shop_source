@@ -1,0 +1,15 @@
+#counter 
+{
+    span 
+    {
+        display: block;
+        background-color:  var(--globale-color);
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 5rem;
+        color:#fff;
+        font-size: 2.2rem;
+    }
+}

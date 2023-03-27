@@ -1,0 +1,28 @@
+#nav_container
+{
+    display: flex;
+    justify-content: flex-end;
+    margin: 2.2rem 0;
+}
+
+nav 
+{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 1.5rem;
+
+    a 
+    {
+        font-size: 2.2rem;
+        margin: 0 1rem;
+    }
+    .noNavActiveLink:hover
+    {
+        color: var(--globale-color);
+        transition: color 0.5s;
+    }
+    .activeNavLink
+    {
+        color: var(--globale-color);
+    }
+}

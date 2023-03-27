@@ -1,0 +1,21 @@
+#categorie
+{
+
+    display: flex;
+    align-items: center;
+    background-color: var(--globale_color_with_opacity);
+    margin: 0.8rem 0;
+
+    img 
+    {
+        width:3.5rem;
+        height:3.5rem;
+        margin:0 0.6rem 
+    }
+
+    h2 
+    {
+        font-size: 2rem;
+        color: #242222;
+    }
+}
