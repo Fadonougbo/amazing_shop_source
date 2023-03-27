@@ -1,6 +1,10 @@
 /* eslint-disable @babel/object-curly-spacing */
 import React from "react";
 
+/**
+ * Bar de recherche du header
+ * @returns JSX
+ */
 export const Seach=()=>{
 
     return (

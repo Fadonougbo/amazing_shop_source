@@ -4,6 +4,13 @@ import { Seach } from "./Seach";
 import { Counter } from "./Counter";
 import { Navigation } from "./Navigation";
 
+/**
+ * 
+ * Affiche le header avec les composant 
+ * Seach,Counter,Navigation
+ * 
+ * @returns JSX
+ */
 export const Header=()=>{
 
     return (

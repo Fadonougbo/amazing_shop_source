@@ -2,6 +2,11 @@
 /* eslint-disable @babel/object-curly-spacing */
 import React from "react";
 
+/**
+ * Affiche le panier 
+ * 
+ * @returns JSX
+ */
 export const Counter=()=>{
 
     return (

@@ -5,6 +5,10 @@ import ky from "ky";
 import { useState } from "react";
 import { useEffect } from "react";
 
+/**
+ * 
+ * @returns Affiche les categories sur le aside
+ */
 export const Aside=()=>{
 
     const [state,setState]=useState({ categories:[] })

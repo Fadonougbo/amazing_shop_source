@@ -1,6 +1,7 @@
 tache 
 
 change les icones de la partie categorie
+géré le cas ou le fetch ne marche pas
 
 
 objectif

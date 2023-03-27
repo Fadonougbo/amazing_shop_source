@@ -2,6 +2,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+/**
+ * Bar de navigation
+ * @returns JSX
+ */
 export const Navigation=()=>{
 
     return (
