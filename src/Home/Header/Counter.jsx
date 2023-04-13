@@ -1,6 +1,8 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable @babel/object-curly-spacing */
 import React from "react";
+import { useContext } from "react";
+import { counterContext } from "../Home.jsx";
 
 /**
  * Affiche le panier 
@@ -9,10 +11,12 @@ import React from "react";
  */
 export const Counter=()=>{
 
+    const counter=useContext(counterContext)
+
     return (
 
         <section id="counter" >
-            <span>1</span>
+            <span>{counter}</span>
         </section>
     )
 }

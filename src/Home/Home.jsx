@@ -13,6 +13,8 @@ import { createContext } from "react";
  */
 export const cardContext=createContext()
 
+export const counterContext=createContext()
+
 /**
  * Composant Home contient les composants:Header,CardSlider,MainView,Aside,Article List
  * 
@@ -21,6 +23,7 @@ export const cardContext=createContext()
 export const Home=()=>{
 
     const [currentCategorie,setCurrentCategorie]=useState({categories:"Fashion"})
+    const [counter,setCounter]=useState({value:0})
 
 
     const changeCurrentCard=(val)=>{
@@ -32,8 +35,10 @@ export const Home=()=>{
     }
 
     return (
-        <>
-                <Header/>
+        <>  
+                <counterContext.Provider value={counter.value} >
+                    <Header/>
+                </counterContext.Provider>
                 <CardSlider/>
                 <MainView>
                     <cardContext.Provider value={changeCurrentCard}>

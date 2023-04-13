@@ -1,4 +1,7 @@
 import React from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from '@hookform/resolvers/zod';
+import {z} from 'zod';
 
 /**
  * 
@@ -9,6 +12,22 @@ import React from "react";
 export const Article=({info,path})=>{
 
     const {name,img,price,quantity_available}=info
+    
+    const shema=z.object({
+        quantity:z.coerce.number().min(1).max(quantity_available)
+    })
+
+    const {register,handleSubmit,formState:{errors}}=useForm({
+
+        resolver:zodResolver(shema)
+    })
+
+    const {quantity}=errors
+
+    const submit=(data)=>{
+
+          console.log(data);
+    }
 
     return (
 
@@ -22,8 +41,15 @@ export const Article=({info,path})=>{
                 <p>quantity available: {quantity_available}</p>
             </section>
             <section>
-                <input type="number" name="quantity" id="quantity" defaultValue="1" />
-                <button>add</button>
+                <form action="" onSubmit={handleSubmit(submit)}>
+                    <div>
+                        <input type="number" id="quantity" min="1" defaultValue="1" {...register("quantity")} />
+                        <button>add</button>
+                    </div>
+                    <div>
+                        {quantity?.message && <p>{quantity.message}</p> }
+                    </div>
+                </form>
             </section>
         </div>
     )

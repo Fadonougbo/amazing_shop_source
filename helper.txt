@@ -3,11 +3,13 @@ tache
 change les icones de la partie categorie
 géré le cas ou le fetch ne marche pas
 
+utilise redux pour incrementer le compteur
+
 
 objectif
 
 utilisé react-router-dom
 utilisé un lib de slider
-utilisé redux
+utilisé redux // zustand
 créé un systeme de recherche
 utilise react icon

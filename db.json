@@ -18,19 +18,19 @@
             "name":"casquette",
             "img":"slide-1.png",
             "price":29,
-            "quatity_available":19
+            "quantity_available":19
         },
         {
             "name":"chaussure",
             "img":"slide-2.png",
             "price":200,
-            "quatity_available":0
+            "quantity_available":0
         },
         {
             "name":"pull",
             "img":"slide-3.png",
             "price":9,
-            "quatity_available":7
+            "quantity_available":7
         }
     ],
 
@@ -39,19 +39,19 @@
             "name":"lunnette",
             "img":"elec-1.png",
             "price":800,
-            "quatity_available":4
+            "quantity_available":4
         },
         {
             "name":"airpode",
             "img":"elec-2.png",
             "price":70,
-            "quatity_available":9
+            "quantity_available":9
         },
         {
             "name":"smartphone",
             "img":"elec-3.png",
             "price":110,
-            "quatity_available":30
+            "quantity_available":30
         }
     ],
 
@@ -60,19 +60,19 @@
             "name":"plante",
             "img":"arrivals1.png",
             "price":90,
-            "quatity_available":1
+            "quantity_available":1
         },
         {
             "name":"rouge au levre",
             "img":"arrivals2.png",
             "price":40,
-            "quatity_available":4
+            "quantity_available":4
         },
         {
             "name":"jeux",
             "img":"arrivals3.png",
             "price":108,
-            "quatity_available":0
+            "quantity_available":0
         }
         
     ]
