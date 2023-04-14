@@ -24,7 +24,5 @@ export const ArticleList=({currentCategorie})=>{
     }
 
 
-    return (
-        <div>{x}</div>
-    )
+    return(<div id="articleList" >{x}</div>) ;
 }

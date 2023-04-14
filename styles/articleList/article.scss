@@ -1,0 +1,86 @@
+
+.article
+{
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: var(--globale_color_with_opacity);
+    border-radius: 3rem;
+
+    span 
+    {
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        color: #fff;
+        text-align: center;
+        line-height: 4rem;
+        font-size: 1.4rem;
+        padding:0 0.4rem;
+        position: absolute;
+        right: 0;
+        background-color: var(--globale-color);
+    }
+
+    .imgContainer 
+    {
+        width:100%;
+        height:18rem;
+        margin:1.4rem 0;
+
+        img 
+        {
+            width:100%;
+            height: 100%;
+        }
+    }
+
+    .articleInfoContainer
+    {
+        h3
+        {
+            text-transform: capitalize;
+            font-size: 2rem;
+            text-align: center;
+            margin: 1.2rem 0;
+        }
+
+        p
+        {
+            text-transform: capitalize;
+            font-size: 2rem;
+            text-align: center;
+            margin: 1.2rem 0;
+        }
+    }
+
+    .formContainer
+    {
+
+        form .quantityInfo
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        input
+        {
+            height: 3rem;
+            margin: 1rem 0.9rem;
+            padding:0 0.8rem;
+        }
+        button 
+        {
+            width:3rem;
+            height: 3rem;
+        }
+        button img 
+        {
+            width:100%;
+            height: 100%;
+        }
+    }
+}

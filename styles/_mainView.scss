@@ -1,0 +1,9 @@
+@use "./aside/aside";
+@use "./articleList/articleList";
+
+#mainView
+{
+    width: 100%;
+   display: flex;
+   //gap: 10px;
+}

@@ -4,7 +4,6 @@ import { Categorie } from "./Categorie";
 import ky from "ky";
 import { useState } from "react";
 import { useEffect } from "react";
-
 /**
  * 
  * @returns Affiche les categories sur le aside
@@ -15,20 +14,27 @@ export const Aside=()=>{
 
     useEffect(()=>
     {
-        ky("http://localhost:3000/categories",
-        {
-            method:"get"
-        }).json()
-        .then((data)=>{
-            
-            setState((s)=>{
-                return {...s,categories:data}
+        
+            ky("http://localhost:3000/categories",
+            {
+                method:"get",
+                retry: {
+                    limit: 15,
+                    methods: ['get'],
+                    statusCodes: [413],
+                    backoffLimit: 4000
+                }
+
+            }).json()
+            .then((data)=>{
+                
+                setState((s)=>{
+                    return {...s,categories:data}
+                })
             })
-        })
+    
 
     },[])
-
-    
 
     const categories=state.categories.map((el,key)=>
     {
@@ -38,7 +44,7 @@ export const Aside=()=>{
     return (
         <aside>
             <div>
-               {categories} 
+               {state.categories.length>0?categories:<h1>Chargement...</h1>} 
             </div>
         </aside>
         

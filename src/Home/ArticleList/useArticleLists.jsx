@@ -19,7 +19,16 @@ export const useArticleList=({serverPath,picturesPath})=>
 
     useEffect(()=>{
 
-        ky(`http://localhost:3000/${serverPath}`)
+        ky(`http://localhost:3000/${serverPath}`,{
+
+            method:"get",
+            retry: {
+                limit: 15,
+                methods: ['get'],
+                statusCodes: [413],
+                backoffLimit: 4000
+            }
+        })
         .json()
         .then((data)=>{
 
@@ -37,5 +46,5 @@ export const useArticleList=({serverPath,picturesPath})=>
      return <Article info={el} path={picturesPath} key={key} />
    })
 
-   return articles
+   return article.elements.length>0?articles:<h1>Chargement...</h1>
 }

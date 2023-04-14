@@ -9,12 +9,6 @@ import { useArticleList } from "./useArticleLists.jsx";
 export const Fashion=()=>{
 
     const articles=useArticleList({serverPath:"fashions",picturesPath:"fashions"})
-
-    return (
-
-        <div id="">
-           {articles}
-        </div>
-       
-    )
+    
+    return articles
 }

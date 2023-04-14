@@ -2,15 +2,15 @@
     "categories":[
         {
             "name":"Fashion",
-            "img":"cat1.png"
+            "img":"cate-1.svg"
         },
         {
             "name":"Electronic",
-            "img":"cat2.png"
+            "img":"cate-2.svg"
         },
         {
             "name":"Other",
-            "img":"cat10.png"
+            "img":"cate-10.svg"
         }
     ],
     "fashions":[

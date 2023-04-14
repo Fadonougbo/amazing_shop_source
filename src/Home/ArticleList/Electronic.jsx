@@ -10,11 +10,5 @@ export const Electronic=()=>{
 
     const articles=useArticleList({serverPath:"electronics",picturesPath:"electronics"})
 
-    return (
-
-        <div id="">
-          {articles}
-        </div>
-       
-    )
+    return (articles)
 }

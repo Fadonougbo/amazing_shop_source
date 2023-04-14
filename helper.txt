@@ -1,8 +1,6 @@
 tache 
 
 change les icones de la partie categorie
-géré le cas ou le fetch ne marche pas
-
 
 geré les chemin des fichier image (essai de les importer)
 
@@ -10,6 +8,11 @@ généré un reçu en pdf
 
 géré le style
 
+systeme pour supprimé un element du panier
+
+changer la couleur du categorie en cours
+
+garder l'etat de la quantité choisir
 
 objectif
 
@@ -17,4 +20,3 @@ utilisé react-router-dom
 utilisé un lib de slider
 utilisé redux // zustand
 créé un systeme de recherche
-utilise react icon

@@ -10,11 +10,5 @@ export const Other=()=>{
 
     const articles=useArticleList({serverPath:"others",picturesPath:"others"})
 
-    return (
-
-        <div id="">
-          {articles}
-        </div>
-       
-    )
+    return articles
 }

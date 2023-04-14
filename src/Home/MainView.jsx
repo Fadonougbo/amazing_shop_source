@@ -5,7 +5,7 @@ export const MainView=({children})=>{
 
 
     return (
-        <div>
+        <div id="mainView" >
             {children}
         </div>
     )
