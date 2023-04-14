@@ -7,10 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "server":"pnpm json-server --watch db.json"
+    "server": "pnpm json-server --watch db.json"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.10",
+    "@react-pdf/renderer": "^3.1.9",
     "@reduxjs/toolkit": "^1.9.1",
     "json-server": "^0.17.1",
     "ky": "^0.33.1",

@@ -3,6 +3,7 @@ import React from "react";
 import { Seach } from "./Seach";
 import { Counter } from "./Counter";
 import { Navigation } from "./Navigation";
+import { Outlet } from "react-router-dom";
 
 /**
  * 
@@ -14,16 +15,19 @@ import { Navigation } from "./Navigation";
 export const Header=()=>{
 
     return (
+        <>
+            <header>
+                <div id="head" >
+                    <section id="logo">
+                        <span>commerce</span>
+                    </section>
+                    <Seach/>
+                    <Counter/>
+                </div>
+                <Navigation/>
+            </header>
+            <Outlet/>
+        </>
 
-        <header>
-            <div id="head" >
-                <section id="logo">
-                    <span>commerce</span>
-                </section>
-                <Seach/>
-                <Counter/>
-            </div>
-            <Navigation/>
-        </header>
     )
 }

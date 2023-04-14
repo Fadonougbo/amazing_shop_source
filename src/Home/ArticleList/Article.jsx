@@ -2,6 +2,8 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from '@hookform/resolvers/zod';
 import {z} from 'zod';
+import { useDispatch } from "react-redux";
+import { addArticle, incrementCounter } from "../../reducer/store.js";
 
 /**
  * 
@@ -12,6 +14,8 @@ import {z} from 'zod';
 export const Article=({info,path})=>{
 
     const {name,img,price,quantity_available}=info
+
+    const dispatch=useDispatch()
     
     const shema=z.object({
         quantity:z.coerce.number().min(1).max(quantity_available)
@@ -26,7 +30,10 @@ export const Article=({info,path})=>{
 
     const submit=(data)=>{
 
-          console.log(data);
+        const {quantity}=data
+        dispatch(addArticle({quantity,img,name,price,path}))
+        dispatch(incrementCounter())
+        
     }
 
     return (

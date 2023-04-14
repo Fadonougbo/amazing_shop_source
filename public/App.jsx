@@ -5,6 +5,10 @@ import { Home } from "../src/Home/Home";
 import { BrowserRouter } from "react-router-dom";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
+import { Header } from "../src/Home/Header/Header.jsx";
+import { store } from "../src/reducer/store.js";
+import { Provider } from "react-redux";
+import { Shopping } from "../src/Home/Shopping/Shopping.jsx";
 
 /**
  * Composant principale
@@ -13,17 +17,20 @@ import { Route } from "react-router-dom";
 const App=()=>{
 
     return(
-
+        
         <BrowserRouter>
             <Routes>
-                <Route path="/"  element={<Home/>} />
+                <Route path="/" element={<Header/>} >
+                    <Route  path="/" element={<Home/>} />
+                    <Route path="shopping" element={<Shopping/>} />
+                </Route>
             </Routes>
-            
         </BrowserRouter>
+    
         
     ) 
 }
 
 const root=createRoot(document.querySelector("#app"))
 
-root.render(<App/>)
+root.render(<Provider store={store} ><App/></Provider>)

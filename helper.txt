@@ -3,7 +3,12 @@ tache
 change les icones de la partie categorie
 géré le cas ou le fetch ne marche pas
 
-utilise redux pour incrementer le compteur
+
+geré les chemin des fichier image (essai de les importer)
+
+généré un reçu en pdf
+
+géré le style
 
 
 objectif
