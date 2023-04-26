@@ -46,7 +46,7 @@ export const Article=({info,path})=>{
             </section>
             <section className="articleInfoContainer">
                 <h3>{name}</h3>
-                <p>quantité disponible: {quantity_available}</p>
+                <p>quantité disponible: <strong>{quantity_available}</strong></p>
             </section>
             <section className="formContainer" >
                 <form action="" onSubmit={handleSubmit(submit)}>

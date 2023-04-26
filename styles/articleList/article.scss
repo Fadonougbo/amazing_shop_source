@@ -1,13 +1,16 @@
 
 .article
 {
-    width: 28%;
+    //width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     background-color: var(--globale_color_with_opacity);
-    border-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    padding: 1rem;
+    margin: 0.7rem;
 
     span 
     {
@@ -21,6 +24,7 @@
         padding:0 0.4rem;
         position: absolute;
         right: 0;
+        top: 0;
         background-color: var(--globale-color);
     }
 
@@ -44,6 +48,8 @@
             text-transform: capitalize;
             font-size: 2rem;
             text-align: center;
+            text-decoration: underline;
+            text-decoration-style: wavy;
             margin: 1.2rem 0;
         }
 
@@ -53,6 +59,11 @@
             font-size: 2rem;
             text-align: center;
             margin: 1.2rem 0;
+        }
+
+        p strong 
+        {
+            color: #a01d06bd;
         }
     }
 
@@ -76,6 +87,9 @@
         {
             width:3rem;
             height: 3rem;
+            border:none;
+            padding: 0.4rem;
+            cursor:pointer;
         }
         button img 
         {

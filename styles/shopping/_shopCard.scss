@@ -1,0 +1,98 @@
+
+
+table
+{
+    width:100%;
+
+    th:not(th:nth-child(6))
+    {
+        background-color: var(--globale_color_with_opacity);
+        border-radius: 8px;
+        padding: 0.5rem;
+    }
+
+    td,th
+    {
+        display: block;
+        width:15rem;
+        
+    }
+
+    thead,tbody
+    {
+        width: 100%;
+        display: block;
+
+        tr 
+        {
+            width:90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    tfoot 
+    {
+        tr 
+        {
+            display: flex;
+            justify-content:center;
+        }
+
+        tr td 
+        {
+            background-color:var(--globale_color_with_opacity);
+            margin: 1rem;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            padding: 0.5rem;
+
+            &:hover 
+            {
+                background-color: rgb(66, 163, 66);
+                color: #fff;
+            }
+        }
+
+    }
+    
+    thead th,tfoot tr
+    {
+        font-size: 3rem;
+        text-transform: capitalize;
+        text-align: center;
+    }
+
+    tbody td 
+    {
+        img
+        {
+            width:15rem;
+            height: 15rem;
+        }
+        
+        button 
+        {
+            padding: 1rem;
+            border:none;
+            border-radius: 50%;
+            cursor: pointer;
+            background-color:rgba(255, 0, 0, 0.801);
+            color: #fff;
+
+            &:hover 
+            {
+                background-color:rgba(255, 0, 0,1);
+            }
+        }
+    }
+
+    tbody td:not(tbody .img_td)
+    {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+}

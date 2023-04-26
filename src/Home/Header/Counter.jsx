@@ -14,8 +14,6 @@ export const Counter=()=>{
 
     const counter=useSelector((state)=>state.counter.value)
 
-
-
     return (
 
         <section id="counter" >

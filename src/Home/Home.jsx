@@ -6,7 +6,7 @@ import { MainView } from "./MainView";
 import { ArticleList } from "./ArticleList/ArticleList.jsx";
 import { createContext } from "react";
 /**
- * Context qui envoie la la function changeCurrentCard
+ * Context qui envoie la function changeCurrentCard
  * au Categorie
  */
 export const cardContext=createContext()

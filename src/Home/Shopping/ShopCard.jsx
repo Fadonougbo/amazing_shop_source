@@ -1,23 +1,15 @@
 import React from "react";
-import { useSelector } from "react-redux";
-
+import { RemoveCard } from "./RemoveCard.jsx";
 
 export const ShopCard=({info})=>{
 
     const {img,name,quantity,price,path}=info
 
-    const totale=useSelector((state)=>state.counter.totale)
-    
-
-    let globalePrice=0
-
-    totale.forEach((el)=>globalePrice+=el.priceSum)
-
 
     return (
 
         <>
-            <table>
+            
                 <thead>
                     <tr>
                         <th>article</th>
@@ -25,22 +17,22 @@ export const ShopCard=({info})=>{
                         <th>prix</th>
                         <th>quantité</th>
                         <th>totale</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td><img src={`../../../public/pictures/${path}/${img}`} alt="" /></td>
+                    <tr>
+                        <td className="img_td" >
+                            <img src={`../../../public/pictures/${path}/${img}`} alt="" />
+                        </td>
                         <td>{name}</td>
-                        <td>{price}</td>
+                        <td>{price}$</td>
                         <td>{quantity}</td>
-                        <td>{price*quantity}</td>
+                        <td>{price*quantity} $</td>
+                        <td><RemoveCard name={name} /></td>
                     </tr>
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <td>T:{globalePrice}</td>
-                    </tr>
-                </tfoot>
-            </table>
+            
         </>
     )
 }

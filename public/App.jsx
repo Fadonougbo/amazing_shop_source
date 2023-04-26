@@ -17,20 +17,20 @@ import { Shopping } from "../src/Home/Shopping/Shopping.jsx";
 const App=()=>{
 
     return(
-        
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Header/>} >
-                    <Route  path="/" element={<Home/>} />
-                    <Route path="shopping" element={<Shopping/>} />
-                </Route>
-            </Routes>
-        </BrowserRouter>
-    
+        <Provider store={store} >
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Header/>} >
+                        <Route  path="/" element={<Home/>} />
+                        <Route path="shopping" element={<Shopping/>} />
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        </Provider>
         
     ) 
 }
 
 const root=createRoot(document.querySelector("#app"))
 
-root.render(<Provider store={store} ><App/></Provider>)
+root.render(<App/>)

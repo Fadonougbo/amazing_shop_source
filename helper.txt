@@ -1,10 +1,10 @@
 tache 
 
+revient sur la generation de pdf pour bien formaté le pdf
+
 change les icones de la partie categorie
 
 geré les chemin des fichier image (essai de les importer)
-
-généré un reçu en pdf
 
 géré le style
 

@@ -30,6 +30,16 @@ const counterSlice=createSlice({
             
         },
 
+        remove:(state,action)=>{
+
+            const removeArticles=state.articlesInfo.filter((el)=>el.name!==action.payload.name)
+            const removeCount=state.totale.filter((el)=>el.name!==action.payload.name)
+
+            
+           state.articlesInfo=removeArticles
+           state.totale=removeCount
+        },
+
         getTotale:(state,action)=>{
            const article=state.totale.find((el)=>el.name===action.payload.name)
 
@@ -51,6 +61,6 @@ export const store=configureStore({
     }
 })
 
-store.subscribe(()=>console.log(store.getState()) )
+/* store.subscribe(()=>console.log(store.getState()) ) */
 
-export const {incrementCounter,addArticle,getTotale}=counterSlice.actions
+export const {incrementCounter,addArticle,getTotale,remove}=counterSlice.actions
