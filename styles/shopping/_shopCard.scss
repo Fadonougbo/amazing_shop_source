@@ -1,5 +1,3 @@
-
-
 table
 {
     width:100%;
@@ -11,17 +9,18 @@ table
         padding: 0.5rem;
     }
 
-    td,th
-    {
-        display: block;
-        width:15rem;
-        
-    }
 
     thead,tbody
     {
         width: 100%;
         display: block;
+
+        td,th
+        {
+            display: block;
+            width:15rem;
+            
+        }
 
         tr 
         {
@@ -42,12 +41,21 @@ table
 
         tr td 
         {
-            background-color:var(--globale_color_with_opacity);
             margin: 1rem;
             text-align: center;
             border-radius: 8px;
             cursor: pointer;
-            padding: 0.5rem;
+            padding: 0.9rem;
+        }
+
+        tr td:nth-child(2)
+        {
+            background-color: #bebe0a;
+        }
+
+        tr td:nth-child(1)
+        {
+            background-color:var(--globale_color_with_opacity);
 
             &:hover 
             {
@@ -60,7 +68,7 @@ table
     
     thead th,tfoot tr
     {
-        font-size: 3rem;
+        font-size: 2rem;
         text-transform: capitalize;
         text-align: center;
     }
@@ -91,7 +99,7 @@ table
 
     tbody td:not(tbody .img_td)
     {
-        font-size: 3rem;
+        font-size: 2.2rem;
         text-align: center;
     }
 

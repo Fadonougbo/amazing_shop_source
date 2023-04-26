@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from '@hookform/resolvers/zod';
 import {z} from 'zod';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addArticle, incrementCounter } from "../../reducer/store.js";
 import add from "../../../public/pictures/utiles/add.svg"
 
@@ -16,15 +16,22 @@ export const Article=({info,path})=>{
 
     const {name,img,price,quantity_available}=info
 
+    const {articlesInfo}=useSelector((state)=>state.counter)
+
     const dispatch=useDispatch()
+
+    const elementByStore=articlesInfo.find((el)=>el.name===name)
+
     
     const shema=z.object({
-        quantity:z.coerce.number().min(1).max(quantity_available)
+        quantity:z.coerce.number().min(1,{message:"Changer de valeur"}).max(quantity_available,{message:"Cette quantité n'est pas disponible"})
     })
 
     const {register,handleSubmit,formState:{errors}}=useForm({
 
-        resolver:zodResolver(shema)
+        resolver:zodResolver(shema),
+        mode:"onTouched"
+    
     })
 
     const {quantity}=errors
@@ -51,7 +58,7 @@ export const Article=({info,path})=>{
             <section className="formContainer" >
                 <form action="" onSubmit={handleSubmit(submit)}>
                     <div className="quantityInfo" >
-                        <input type="number" id="quantity" min="1" defaultValue="1" {...register("quantity")} />
+                        <input type="number" id="quantity" min="1" defaultValue={elementByStore?.quantity||1} {...register("quantity")} />
                         <button><img src={add} alt="" /></button>
                     </div>
                     <div>

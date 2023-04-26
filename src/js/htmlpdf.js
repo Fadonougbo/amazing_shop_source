@@ -26,14 +26,9 @@ export const getGlobaleHtml=(articlesInfo,globalePrice)=>
     })
 
     const globaleHtml=`
-
-    <div>
-        <h1>Shop<h1>
-        ${articlesHtml}
-        <h1>Totale:${globalePrice} $<h1>
-    </div>
-
-    `
+            <h1>Shop<h1>
+            ${articlesHtml}
+            <h1>Totale:${globalePrice} $<h1>`
 
     return globaleHtml;
 }

@@ -7,20 +7,21 @@ import { getGlobaleHtml } from "../../js/htmlpdf";
 export const Buy=({articlesInfo,globalePrice,children})=>{
 
     const doc = new jsPDF({
-        orientation:"landscape"
+        
     });
     
     const click=()=>{
 
         const p=getGlobaleHtml(articlesInfo,globalePrice);
-  
+        doc.setFont("helvetica");
+        doc.setFontSize(9);
         doc.html(p, {
             callback: function (doc) {
               doc.save("test.pdf");
-            },
-            x: 10,
-            y: 10
+            }
          });
+
+         console.log(doc.getFontSize());
     }
 
     return(

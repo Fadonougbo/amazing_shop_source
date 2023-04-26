@@ -16,13 +16,19 @@ nav
         font-size: 2.2rem;
         margin: 0 1rem;
     }
-    .noNavActiveLink:hover
+    .navLInk
     {
-        color: var(--globale-color);
-        transition: color 0.5s;
+        color:#000;
+        padding: 0.6rem;
+        border-radius: 0.5rem;
     }
+    .noNavActiveLink
+    {
+        background-color: var(--globale_color_with_opacity);
+    }
+
     .activeNavLink
     {
-        color: var(--globale-color);
+        background-color: #90ee90;
     }
 }

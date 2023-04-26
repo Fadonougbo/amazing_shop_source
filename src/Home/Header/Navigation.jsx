@@ -14,9 +14,15 @@ export const Navigation=()=>{
            <nav>
                 <NavLink to="/"  
                 className={
-                    ({ isActive }) =>isActive ? "activeNavLink" : "noNavActiveLink"}
+                    ({ isActive }) =>isActive ? "activeNavLink navLInk" : "noNavActiveLink navLInk"}
                 >
                     Home
+                </NavLink>
+                <NavLink to="/shopping"  
+                className={
+                    ({ isActive }) =>isActive ? "activeNavLink navLInk" : "noNavActiveLink navLInk"}
+                >
+                    Panier
                 </NavLink>
            </nav>
         </section>

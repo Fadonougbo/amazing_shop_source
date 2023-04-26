@@ -2,21 +2,14 @@ tache
 
 revient sur la generation de pdf pour bien formaté le pdf
 
-change les icones de la partie categorie
 
 geré les chemin des fichier image (essai de les importer)
 
-géré le style
-
-systeme pour supprimé un element du panier
-
-changer la couleur du categorie en cours
-
-garder l'etat de la quantité choisir
+ajoute un slider 
+reviens sur jsPDF
 
 objectif
 
 utilisé react-router-dom
 utilisé un lib de slider
 utilisé redux // zustand
-créé un systeme de recherche

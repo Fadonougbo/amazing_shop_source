@@ -3,38 +3,43 @@ import { useDispatch, useSelector } from "react-redux";
 import { ShopCard } from "./ShopCard.jsx";
 import { getTotale } from "../../reducer/store.js";
 import { Buy } from "./Buy.jsx";
+import { useEffect } from "react";
 
 
 export const Shopping=()=>{
 
-    const articleList=useSelector((state)=>state.counter.articlesInfo)
+    const {articlesInfo,totale}=useSelector((state)=>state.counter)
     const dispatch=useDispatch()
     
-    const cardList=articleList.map((el,key)=>
-    {
-        dispatch(getTotale({priceSum:el.price*el.quantity,name:el.name}))
-        
+    const cardList=articlesInfo.map((el,key)=>
+    {   
         return <ShopCard key={key} info={el} />
     })
 
-    const totale=useSelector((state)=>state.counter.totale)
+     useEffect(()=>{
+
+        articlesInfo.forEach((el)=>
+        {
+            dispatch(getTotale({priceSum:el.price*el.quantity,name:el.name}))
+            
+        })
+
+     },[articlesInfo])   
+
     
     let globalePrice=0
-
     totale.forEach((el)=>globalePrice+=el.priceSum)
-
-
 
     return(
         <>
             <div id="table_container">
                 {
-                articleList.length>0?
+                articlesInfo.length>0?
                 <table>{cardList} 
                     <tfoot>
                         <tr rowSpan={2}>
-                        <Buy articlesInfo={articleList} globalePrice={globalePrice} >Acheter</Buy>
-                        <td>T:{globalePrice}$</td>
+                        <Buy articlesInfo={articlesInfo} globalePrice={globalePrice} >Je valide les achats</Buy>
+                        <td>A payer : {globalePrice}$</td>
                         </tr>
                     </tfoot>
                 </table>

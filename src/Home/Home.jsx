@@ -5,6 +5,7 @@ import { Aside } from "./Aside/Aside";
 import { MainView } from "./MainView";
 import { ArticleList } from "./ArticleList/ArticleList.jsx";
 import { createContext } from "react";
+
 /**
  * Context qui envoie la function changeCurrentCard
  * au Categorie
@@ -28,11 +29,13 @@ export const Home=()=>{
         })
     }
 
+    const currentCategorieName=currentCategorie.categories
+
     return (
         <>  
                 <CardSlider/>
                 <MainView>
-                    <cardContext.Provider value={changeCurrentCard}>
+                    <cardContext.Provider value={[changeCurrentCard,currentCategorieName]}>
                         <Aside/> 
                     </cardContext.Provider>
                         <ArticleList currentCategorie={currentCategorie.categories} />
