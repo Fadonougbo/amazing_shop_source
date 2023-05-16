@@ -31,6 +31,22 @@ export const Aside=()=>{
                     return {...s,categories:data}
                 })
             })
+
+            /* ky("db.json",
+            {
+                method:"get",
+                retry: {
+                    limit: 15,
+                    methods: ['get'],
+                    statusCodes: [413],
+                    backoffLimit: 4000
+                }
+
+            }).json()
+            .then((data)=>{
+                
+                console.log(data);
+            }) */
     
 
     },[])

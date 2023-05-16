@@ -8,6 +8,11 @@ geré les chemin des fichier image (essai de les importer)
 ajoute un slider 
 reviens sur jsPDF
 
+refait le style des cards
+ajout de etoile
+telecharge un svg pour les etoiles
+utilise ky pour fetcher le fichier json
+
 objectif
 
 utilisé react-router-dom

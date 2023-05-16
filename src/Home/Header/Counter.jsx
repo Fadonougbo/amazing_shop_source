@@ -16,7 +16,7 @@ export const Counter=()=>{
     return (
 
         <section id="counter" >
-            <Link to={"/shopping"}><img src="utiles/panier.svg" alt="panier" /></Link>
+            <Link to={"/shopping"}><img src="pictures/utiles/panier.svg" alt="panier" /></Link>
             <span>{counter}</span> 
         </section>
     )

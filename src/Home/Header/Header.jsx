@@ -19,7 +19,7 @@ export const Header=()=>{
             <header>
                 <div id="head" >
                     <section id="logo">
-                        <img src="utiles/shop.svg" alt="logo" />
+                        <img src="pictures/utiles/shop.svg" alt="logo" />
                     </section>
                     <Seach/>
                     <Counter/>

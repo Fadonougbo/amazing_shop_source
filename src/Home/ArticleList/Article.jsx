@@ -4,7 +4,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import {z} from 'zod';
 import { useDispatch, useSelector } from "react-redux";
 import {addArticleOrChangeQuantity,incrementPanierCounter } from "../../reducer/store.js";
-import add from "../../../public/pictures/utiles/add.svg"
 
 /**
  * 
@@ -54,7 +53,7 @@ export const Article=({info,path})=>{
         <div className="article" >
             <span>{price} $</span>
             <section className="imgContainer" >
-                <img src={`../../../public/pictures/${path}/${img}`} alt="" />
+                <img src={`pictures/${path}/${img}`} alt="" />
             </section>
             <section className="articleInfoContainer">
                 <h3>{name}</h3>
@@ -64,7 +63,7 @@ export const Article=({info,path})=>{
                 <form action="" onSubmit={handleSubmit(submit)}>
                     <div className="quantityInfo" >
                         <input type="number" id="quantity" min="1" defaultValue={currentArticleFromStore?.quantity||1} {...register("quantity")} />
-                        <button><img src={add} alt="" /></button>
+                        <button><img src="pictures/utiles/add.svg" alt="" /></button>
                     </div>
                     <div>
                         {quantity?.message && <p>{quantity.message}</p> }
