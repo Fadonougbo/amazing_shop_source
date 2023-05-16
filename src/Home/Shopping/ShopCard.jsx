@@ -6,7 +6,6 @@ export const ShopCard=({info})=>{
 
     const {img,name,quantity,price,path}=info
 
-
     return (
 
         <>
@@ -24,7 +23,7 @@ export const ShopCard=({info})=>{
                 <tbody>
                     <tr>
                         <td className="img_td" >
-                            <img src={`../../../public/pictures/${path}/${img}`} alt="" />
+                            <img src={`${path}/${img}`} alt="" />
                         </td>
                         <td>{name}</td>
                         <td>{price}$</td>

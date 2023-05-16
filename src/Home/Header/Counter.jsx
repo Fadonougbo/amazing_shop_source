@@ -3,7 +3,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import panier from "../../../public/pictures/utiles/panier.svg"
 
 /**
  * Affiche le panier 
@@ -17,7 +16,7 @@ export const Counter=()=>{
     return (
 
         <section id="counter" >
-            <Link to={"/shopping"}><img src={panier} alt="panier" /></Link>
+            <Link to={"/shopping"}><img src="utiles/panier.svg" alt="panier" /></Link>
             <span>{counter}</span> 
         </section>
     )

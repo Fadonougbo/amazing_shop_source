@@ -4,7 +4,6 @@ import { Seach } from "./Seach";
 import { Counter } from "./Counter";
 import { Navigation } from "./Navigation";
 import { Outlet } from "react-router-dom";
-import shop from "../../../public/pictures/utiles/shop.svg"
 
 /**
  * 
@@ -20,7 +19,7 @@ export const Header=()=>{
             <header>
                 <div id="head" >
                     <section id="logo">
-                        <img src={shop} alt="" />
+                        <img src="utiles/shop.svg" alt="logo" />
                     </section>
                     <Seach/>
                     <Counter/>
