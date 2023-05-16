@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch} from "react-redux";
-import { incrementCounter, remove } from "../../reducer/store.js";
+import {incrementPanierCounter, removeArticle } from "../../reducer/store.js";
 
 
 export const RemoveCard=({name})=>{
@@ -10,8 +10,8 @@ export const RemoveCard=({name})=>{
 
     const click=()=>{
        
-        dispatch(remove({name}))
-        dispatch(incrementCounter())
+        dispatch(removeArticle({name}))
+        dispatch(incrementPanierCounter())
     }
 
     return(<button onClick={click} >X</button>)

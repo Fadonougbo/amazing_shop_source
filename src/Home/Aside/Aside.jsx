@@ -1,9 +1,8 @@
 /* eslint-disable @babel/object-curly-spacing */
-import React from "react";
+import React,{useState,useEffect} from "react";
 import { Categorie } from "./Categorie";
 import ky from "ky";
-import { useState } from "react";
-import { useEffect } from "react";
+
 /**
  * 
  * @returns Affiche les categories sur le aside
@@ -36,9 +35,9 @@ export const Aside=()=>{
 
     },[])
 
-    const categories=state.categories.map((el,key)=>
+    const categories=state.categories.map((categorie,key)=>
     {
-        return <Categorie info={el} key={key} />
+        return <Categorie info={categorie} key={key} />
     })
 
     return (

@@ -1,26 +1,25 @@
-import React from "react";
+import React,{ useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ShopCard } from "./ShopCard.jsx";
-import { getTotale } from "../../reducer/store.js";
+import {setArticlePrice } from "../../reducer/store.js";
 import { Buy } from "./Buy.jsx";
-import { useEffect } from "react";
 
 
 export const Shopping=()=>{
 
-    const {articlesInfo,totale}=useSelector((state)=>state.counter)
+    const {articlesInfo,panierArticlesInfo}=useSelector((state)=>state.counter)
     const dispatch=useDispatch()
     
-    const cardList=articlesInfo.map((el,key)=>
+    const cardList=articlesInfo.map((article,key)=>
     {   
-        return <ShopCard key={key} info={el} />
+        return <ShopCard key={key} info={article} />
     })
 
      useEffect(()=>{
 
-        articlesInfo.forEach((el)=>
+        articlesInfo.forEach((article)=>
         {
-            dispatch(getTotale({priceSum:el.price*el.quantity,name:el.name}))
+            dispatch(setArticlePrice({totalPrice:article.price*article.quantity,name:article.name}))
             
         })
 
@@ -28,7 +27,7 @@ export const Shopping=()=>{
 
     
     let globalePrice=0
-    totale.forEach((el)=>globalePrice+=el.priceSum)
+    panierArticlesInfo.forEach((article)=>globalePrice+=article.totalPrice)
 
     return(
         <>

@@ -19,7 +19,7 @@ export const Categorie=({info})=>{
     }
 
     return (
-        <div id="categorie"onClick={change} className={name===currentCategorieName?"active_categorie":""} >
+        <div id="categorie" onClick={change} className={name===currentCategorieName?"active_categorie":""} >
             <img src={`../../../public/pictures/category/${img}`} alt="logo" />
             <h2>{name}</h2>
         </div>

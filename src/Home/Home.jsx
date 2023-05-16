@@ -23,9 +23,9 @@ export const Home=()=>{
 
     const changeCurrentCard=(val)=>{
 
-        setCurrentCategorie((s)=>{
+        setCurrentCategorie((state)=>{
 
-            return {...s,categories:val}
+            return {...state,categories:val}
         })
     }
 
@@ -38,7 +38,7 @@ export const Home=()=>{
                     <cardContext.Provider value={[changeCurrentCard,currentCategorieName]}>
                         <Aside/> 
                     </cardContext.Provider>
-                        <ArticleList currentCategorie={currentCategorie.categories} />
+                        <ArticleList currentCategorie={currentCategorieName} />
                 </MainView>
         </>
         

@@ -3,7 +3,7 @@ import {configureStore, createSlice} from "@reduxjs/toolkit"
 
 const initialState={
     value:0,
-    totale:[],
+    panierArticlesInfo:[],
     articlesInfo:[]
 }
 
@@ -11,14 +11,25 @@ const counterSlice=createSlice({
     name:"counter",
     initialState,
     reducers:{
-        incrementCounter:(state)=>{
+
+        /**
+         * Incremente la valeur du panier
+         * @param {*} state 
+         */
+        incrementPanierCounter:(state)=>{
                 state.value=state.articlesInfo.length
 
         },
 
-        addArticle:(state,action)=>{
+        /**
+         * Ajoute un element au panier
+         * change la quantité si l'element est deja present dans le panier
+         * @param {*} state 
+         * @param {*} action 
+         */
+        addArticleOrChangeQuantity:(state,action)=>{
 
-            const article=state.articlesInfo.find((el)=>el.name===action.payload.name)
+            const article=state.articlesInfo.find((article)=>article.name===action.payload.name)
             
             if(article)
             {
@@ -30,25 +41,25 @@ const counterSlice=createSlice({
             
         },
 
-        remove:(state,action)=>{
+        removeArticle:(state,action)=>{
 
-            const removeArticles=state.articlesInfo.filter((el)=>el.name!==action.payload.name)
-            const removeCount=state.totale.filter((el)=>el.name!==action.payload.name)
+            const removeArticles=state.articlesInfo.filter((article)=>article.name!==action.payload.name)
+            const removeCount=state.panierArticlesInfo.filter((article)=>article.name!==action.payload.name)
 
             
            state.articlesInfo=removeArticles
-           state.totale=removeCount
+           state.panierArticlesInfo=removeCount
         },
 
-        getTotale:(state,action)=>{
-           const article=state.totale.find((el)=>el.name===action.payload.name)
+        setArticlePrice:(state,action)=>{
+           const article=state.panierArticlesInfo.find((article)=>article.name===action.payload.name)
 
            if(article)
            {
-                article["priceSum"]=action.payload.priceSum
+                article.totalPrice=action.payload.totalPrice
            }else 
            {
-            state.totale.push(action.payload)
+                state.panierArticlesInfo.push(action.payload)
            }
             
         }
@@ -61,6 +72,6 @@ export const store=configureStore({
     }
 })
 
-/* store.subscribe(()=>console.log(store.getState()) ) */
+//store.subscribe(()=>console.log(store.getState()) )
 
-export const {incrementCounter,addArticle,getTotale,remove}=counterSlice.actions
+export const {incrementPanierCounter,addArticleOrChangeQuantity,setArticlePrice,removeArticle}=counterSlice.actions

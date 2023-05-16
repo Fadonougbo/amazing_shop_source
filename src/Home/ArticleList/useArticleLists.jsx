@@ -1,6 +1,4 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import React,{useEffect,useState} from "react";
 import { Article } from "./Article.jsx";
 import ky from "ky";
 
@@ -15,7 +13,7 @@ import ky from "ky";
 export const useArticleList=({serverPath,picturesPath})=>
 {
 
-    const [article,setArticle]=useState({elements:[]})
+    const [articles,setArticle]=useState({elements:[]})
 
     useEffect(()=>{
 
@@ -41,10 +39,10 @@ export const useArticleList=({serverPath,picturesPath})=>
     },[serverPath])
 
 
-   const articles=article.elements.map((el,key)=>
+   const articlesList=articles.elements.map((article,key)=>
    {
-     return <Article info={el} path={picturesPath} key={key} />
+     return <Article info={article} path={picturesPath} key={key} />
    })
 
-   return article.elements.length>0?articles:<h1>Chargement...</h1>
+   return articles.elements.length>0?articlesList:<h1>Chargement...</h1>
 }

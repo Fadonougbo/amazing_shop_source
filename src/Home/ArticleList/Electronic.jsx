@@ -1,5 +1,4 @@
 /* eslint-disable @babel/object-curly-spacing */
-import React from "react";
 import { useArticleList } from "./useArticleLists.jsx";
 
 /**

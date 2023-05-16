@@ -1,14 +1,13 @@
-
 import React  from "react";
 import { Fashion } from "./Fashion.jsx";
 import { Electronic } from "./Electronic.jsx";
 import { Other } from "./Other.jsx";
 
 /**
- * Affiche les articles liées à une categorie
+ * Affiche les articles liés à une categorie
  * 
- * @param {{currentCategorie}} param0 
- * @returns 
+ * @param {{currentCategorie}} currentCategorie nom de la categorie visible 
+ * 
  */
 export const ArticleList=({currentCategorie})=>{
 
