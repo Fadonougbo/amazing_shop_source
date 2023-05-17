@@ -13,8 +13,8 @@ export const Aside=()=>{
 
     useEffect(()=>
     {
-        
-            ky("http://localhost:3000/categories",
+
+            ky("db.json",
             {
                 method:"get",
                 retry: {
@@ -26,27 +26,11 @@ export const Aside=()=>{
 
             }).json()
             .then((data)=>{
-                
+               
                 setState((s)=>{
-                    return {...s,categories:data}
+                    return {...s,categories:data.categories}
                 })
             })
-
-            /* ky("db.json",
-            {
-                method:"get",
-                retry: {
-                    limit: 15,
-                    methods: ['get'],
-                    statusCodes: [413],
-                    backoffLimit: 4000
-                }
-
-            }).json()
-            .then((data)=>{
-                
-                console.log(data);
-            }) */
     
 
     },[])
@@ -58,9 +42,7 @@ export const Aside=()=>{
 
     return (
         <aside>
-            <div>
                {state.categories.length>0?categories:<h1>Chargement...</h1>} 
-            </div>
         </aside>
         
     )

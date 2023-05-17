@@ -7,7 +7,7 @@ import { useArticleList } from "./useArticleLists.jsx";
  */
 export const Electronic=()=>{
 
-    const articles=useArticleList({serverPath:"electronics",picturesPath:"electronics"})
+    const articles=useArticleList({serverPath:"electroniques",picturesPath:"electronics"})
 
     return (articles)
 }

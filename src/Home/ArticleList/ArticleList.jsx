@@ -15,9 +15,9 @@ export const ArticleList=({currentCategorie})=>{
 
     switch (currentCategorie) {
 
-        case "Electronic": x=<Electronic/> ; break;
+        case "Electroniques": x=<Electronic/> ; break;
 
-        case "Other": x=<Other/> ; break;
+        case "Autres": x=<Other/> ; break;
     
         default: x=<Fashion/>; break;
     }

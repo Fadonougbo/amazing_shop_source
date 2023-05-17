@@ -17,7 +17,8 @@ export const useArticleList=({serverPath,picturesPath})=>
 
     useEffect(()=>{
 
-        ky(`http://localhost:3000/${serverPath}`,{
+
+        ky(`db.json`,{
 
             method:"get",
             retry: {
@@ -30,10 +31,15 @@ export const useArticleList=({serverPath,picturesPath})=>
         .json()
         .then((data)=>{
 
-            setArticle((s)=>
+            if(Object.hasOwn(data,serverPath))
             {
-                return {...s,elements:data}
-            })
+                setArticle((s)=>
+                {
+                    return {...s,elements:data[serverPath]}
+                })
+            }
+
+            
         })
         
     },[serverPath])

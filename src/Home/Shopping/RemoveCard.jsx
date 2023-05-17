@@ -14,5 +14,5 @@ export const RemoveCard=({name})=>{
         dispatch(incrementPanierCounter())
     }
 
-    return(<button onClick={click} >X</button>)
+    return(<button className="remove" onClick={click}>Supprimer</button>)
 }

@@ -1,19 +1,19 @@
 {
     "categories":[
         {
-            "name":"Fashion",
+            "name":"Vetements",
             "img":"cate-1.svg"
         },
         {
-            "name":"Electronic",
+            "name":"Electroniques",
             "img":"cate-2.svg"
         },
         {
-            "name":"Other",
+            "name":"Autres",
             "img":"cate-10.svg"
         }
     ],
-    "fashions":[
+    "vetements":[
         {
             "name":"casquette",
             "img":"slide-1.png",
@@ -34,7 +34,7 @@
         }
     ],
 
-    "electronics":[
+    "electroniques":[
         {
             "name":"lunnette",
             "img":"elec-1.png",
@@ -55,7 +55,7 @@
         }
     ],
 
-    "others":[
+    "autres":[
         {
             "name":"plante",
             "img":"arrivals1.png",

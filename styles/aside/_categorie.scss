@@ -2,25 +2,26 @@
 {
 
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     background-color: var(--globale_color_with_opacity);
     margin: 0.8rem 0;
     cursor: pointer;
     padding:1rem ;
-    border-top-right-radius: 10rem;
-    border-bottom-right-radius: 10rem;
+    overflow-wrap: anywhere;
+    border-left: solid 10px var(--globale-color);
 
     img 
     {
-        width:3.5rem;
-        height:3.5rem;
+        width:2.8rem;
+        height:2.8rem;
         margin:0 0.9rem 
     }
 
     h2 
     {
-        font-size: 2rem;
+        font-size: 1.7rem;
         color: #242222;
     }
 

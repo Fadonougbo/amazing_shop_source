@@ -1,106 +1,33 @@
-table
+@use "removeCard";
+
+.card_container
 {
-    width:100%;
+    width: 30rem;
+    display: flex;
+    margin: 2.3rem;
+    background: linear-gradient(145deg, #CACCCF, #FFFFFF);
+    box-shadow: 5.41px 5.41px 23px #A3A4A7, -5.41px -5.41px 23px #FFFFFF;
 
-    th:not(th:nth-child(6))
+    img 
     {
-        background-color: var(--globale_color_with_opacity);
-        border-radius: 8px;
-        padding: 0.5rem;
+        width: 15rem;
+        height: 15rem;
     }
-
-
-    thead,tbody
+    .info_card
     {
-        width: 100%;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between ;
+        padding: 0.8rem;
+    }
+    .info_card p
+    {
+        font-size: 1.8rem;
 
-        td,th
+        span 
         {
-            display: block;
-            width:15rem;
-            
-        }
-
-        tr 
-        {
-            width:90%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            font-weight: 800;
         }
     }
-
-    tfoot 
-    {
-        tr 
-        {
-            display: flex;
-            justify-content:center;
-        }
-
-        tr td 
-        {
-            margin: 1rem;
-            text-align: center;
-            border-radius: 8px;
-            cursor: pointer;
-            padding: 0.9rem;
-        }
-
-        tr td:nth-child(2)
-        {
-            background-color: #bebe0a;
-        }
-
-        tr td:nth-child(1)
-        {
-            background-color:var(--globale_color_with_opacity);
-
-            &:hover 
-            {
-                background-color: rgb(66, 163, 66);
-                color: #fff;
-            }
-        }
-
-    }
-    
-    thead th,tfoot tr
-    {
-        font-size: 2rem;
-        text-transform: capitalize;
-        text-align: center;
-    }
-
-    tbody td 
-    {
-        img
-        {
-            width:15rem;
-            height: 15rem;
-        }
-        
-        button 
-        {
-            padding: 1rem;
-            border:none;
-            border-radius: 50%;
-            cursor: pointer;
-            background-color:rgba(255, 0, 0, 0.801);
-            color: #fff;
-
-            &:hover 
-            {
-                background-color:rgba(255, 0, 0,1);
-            }
-        }
-    }
-
-    tbody td:not(tbody .img_td)
-    {
-        font-size: 2.2rem;
-        text-align: center;
-    }
-
 }
+

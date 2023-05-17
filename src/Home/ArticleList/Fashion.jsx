@@ -7,7 +7,7 @@ import { useArticleList } from "./useArticleLists.jsx";
  */
 export const Fashion=()=>{
 
-    const articles=useArticleList({serverPath:"fashions",picturesPath:"fashions"})
+    const articles=useArticleList({serverPath:"vetements",picturesPath:"fashions"})
     
     return articles
 }

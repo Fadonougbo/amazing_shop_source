@@ -1,13 +1,46 @@
 @use "shopCard";
+@use "buy";
 
-#table_container
+#empty_card 
+{
+    font-size: 3rem;
+    text-align: center;
+}
+
+#panier_content
 {
     width:100%;
     padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
 
-    h1 
+    #article_list
     {
-        font-size: 3rem;
-        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+    }
+
+    #action
+    {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        button 
+        {
+            margin: 1rem;
+            padding: 1rem;
+            border:none;
+            font-size: 1.8rem;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button#total
+        {
+            background-color: var(--globale-color);
+        }
     }
 }

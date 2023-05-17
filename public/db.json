@@ -1,19 +1,19 @@
 {
     "categories":[
         {
-            "name":"Fashion",
+            "name":"Vetements",
             "img":"cate-1.svg"
         },
         {
-            "name":"Electronic",
+            "name":"Electroniques",
             "img":"cate-2.svg"
         },
         {
-            "name":"Other",
+            "name":"Autres",
             "img":"cate-10.svg"
         }
     ],
-    "fashions":[
+    "vetements":[
         {
             "name":"casquette",
             "img":"slide-1.png",
@@ -21,28 +21,28 @@
             "quantity_available":19
         },
         {
-            "name":"chaussure",
+            "name":"chaussures",
             "img":"slide-2.png",
             "price":200,
             "quantity_available":0
         },
         {
-            "name":"pull",
+            "name":"pull-over",
             "img":"slide-3.png",
             "price":9,
             "quantity_available":7
         }
     ],
 
-    "electronics":[
+    "electroniques":[
         {
-            "name":"lunnette",
+            "name":"lunnettes",
             "img":"elec-1.png",
             "price":800,
             "quantity_available":4
         },
         {
-            "name":"airpode",
+            "name":"Airpods",
             "img":"elec-2.png",
             "price":70,
             "quantity_available":9
@@ -55,21 +55,21 @@
         }
     ],
 
-    "others":[
+    "autres":[
         {
-            "name":"plante",
+            "name":"plante sauvage",
             "img":"arrivals1.png",
             "price":90,
             "quantity_available":1
         },
         {
-            "name":"rouge au levre",
+            "name":"rouge à levres",
             "img":"arrivals2.png",
             "price":40,
             "quantity_available":4
         },
         {
-            "name":"jeux",
+            "name":"playstation",
             "img":"arrivals3.png",
             "price":108,
             "quantity_available":0

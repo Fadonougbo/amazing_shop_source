@@ -5,13 +5,46 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    background-color: var(--globale_color_with_opacity);
-    border-top-left-radius: 3rem;
-    border-bottom-right-radius: 3rem;
-    padding: 1rem;
     margin: 0.7rem;
+    background: linear-gradient(145deg, #CACCCF, #FFFFFF);
+    box-shadow: 5.41px 5.41px 23px #A3A4A7, -5.41px -5.41px 23px #FFFFFF;
 
-    span 
+    &:hover 
+    {
+        transform: translateY(-3.5px);
+    }
+
+    .errorMessage 
+    {
+        background: #ff6347;
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 0;
+        overflow: hidden;
+        text-align: center;
+        font-size: 1.6rem;
+        color: #fdf6f6;
+        transition: height 0.4s;
+
+        &.error
+        {
+            height: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    #foot 
+    {
+        background-color: var(--globale_color_with_opacity);
+        border-top-right-radius: 60px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    #price 
     {
         display: block;
         width: 4rem;
@@ -25,6 +58,11 @@
         right: 0;
         top: 0;
         background-color: var(--globale-color);
+        opacity: 0.8;
+        &:hover 
+        {
+            opacity: 1;
+        }
     }
 
     .imgContainer 
@@ -64,6 +102,12 @@
         {
             color: #a01d06bd;
         }
+
+        p img
+        {
+            width: 2rem;
+            height: 2rem;
+        }
     }
 
     .formContainer
@@ -73,8 +117,10 @@
         {
             display: flex;
             justify-content: center;
-            align-items: center;
+            //align-items: center;
+            flex-direction: column;
             flex-wrap: wrap;
+            
         }
         input
         {
@@ -84,22 +130,28 @@
         }
         button 
         {
-            width:3rem;
             height: 3rem;
             border:none;
             padding: 0.4rem;
             cursor:pointer;
+            flex: 1 1 auto;
+            background-color: var(--globale-color);
+            opacity: 0.8;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            &:hover 
+            {
+                opacity: 1;
+            }
         }
         button img 
         {
-            width:100%;
-            height: 100%;
-        }
-
-        p 
-        {
-            font-size: 1.8rem;
-            color: #ff0000;
+            width:2.5rem;
+            height: 2.5rem;
         }
     }
 }

@@ -9,29 +9,18 @@ export const ShopCard=({info})=>{
     return (
 
         <>
-            
-                <thead>
-                    <tr>
-                        <th>article</th>
-                        <th>nom</th>
-                        <th>prix</th>
-                        <th>quantité</th>
-                        <th>totale</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td className="img_td" >
-                            <img src={`${path}/${img}`} alt="" />
-                        </td>
-                        <td>{name}</td>
-                        <td>{price}$</td>
-                        <td>{quantity}</td>
-                        <td>{price*quantity} $</td>
-                        <td><RemoveCard name={name} /></td>
-                    </tr>
-                </tbody>
+                <div className="card_container" >
+                    <section className="img_card">
+                        <img src={`pictures/${path}/${img}`} alt="" />
+                    </section>
+                    <section className="info_card">
+                        <p>Nom: <span>{name}</span></p>
+                        <p>Prix: <span>{price}$</span></p>
+                        <p>Quantité: <span>{quantity}</span></p>
+                        <p>Prix tolal: <span>{price*quantity}$</span></p>
+                        <RemoveCard name={name} />
+                    </section>
+                </div>
             
         </>
     )

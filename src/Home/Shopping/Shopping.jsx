@@ -31,20 +31,18 @@ export const Shopping=()=>{
 
     return(
         <>
-            <div id="table_container">
-                {
-                articlesInfo.length>0?
-                <table>{cardList} 
-                    <tfoot>
-                        <tr rowSpan={2}>
-                        <Buy articlesInfo={articlesInfo} globalePrice={globalePrice} >Je valide les achats</Buy>
-                        <td>A payer : {globalePrice}$</td>
-                        </tr>
-                    </tfoot>
-                </table>
-                :<h1>Panier Vide</h1>
+                {articlesInfo.length>0?
+                    <div id="panier_content">
+                        <div id="action" >
+                            <Buy articlesInfo={articlesInfo} globalePrice={globalePrice} >Je valide les achats</Buy>
+                           <button id="total">A payer: {globalePrice}$</button> 
+                        </div>
+                        <div id="article_list" >
+                            {cardList} 
+                        </div>
+                    </div>
+                :<h1 id="empty_card">Panier Vide</h1>
                 }
-            </div>
-        
+            
         </>) 
 }

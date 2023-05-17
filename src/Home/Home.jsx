@@ -19,7 +19,7 @@ export const cardContext=createContext()
  */
 export const Home=()=>{
 
-    const [currentCategorie,setCurrentCategorie]=useState({categories:"Fashion"})
+    const [currentCategorie,setCurrentCategorie]=useState({categories:"Vetements"})
 
     const changeCurrentCard=(val)=>{
 

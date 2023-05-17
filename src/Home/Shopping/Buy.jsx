@@ -25,7 +25,7 @@ export const Buy=({articlesInfo,globalePrice,children})=>{
     }
 
     return(
-        <td onClick={click}>
+        <button id="buy" onClick={click}>
             {children}
-        </td>) 
+        </button>) 
 }

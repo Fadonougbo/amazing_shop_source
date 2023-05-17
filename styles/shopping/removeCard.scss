@@ -1,0 +1,13 @@
+.remove 
+{
+    padding: 1rem;
+    border:none;
+    cursor: pointer;
+    background-color:#ff6347;
+    color: #fff;
+
+    &:hover 
+    {
+        background-color:rgba(255, 0, 0,1);
+    }
+}
