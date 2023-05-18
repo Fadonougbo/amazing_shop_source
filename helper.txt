@@ -5,10 +5,11 @@ revient sur la generation de pdf pour bien formaté le pdf
 
 geré les chemin des fichier image (essai de les importer)
 
-ajoute un slider 
 reviens sur jsPDF
 
 faire la partie de fitre
+
+ajoute un footer
 
 corrige les fautes d'orthographe
 
