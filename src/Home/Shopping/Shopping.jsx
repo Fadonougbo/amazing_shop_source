@@ -3,8 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { ShopCard } from "./ShopCard.jsx";
 import {setArticlePrice } from "../../reducer/store.js";
 import { Buy } from "./Buy.jsx";
+import { Footer } from "../Footer/Footer.jsx";
 
-
+/**
+ * Composant pour afficher un  element du panier
+ * 
+ */
 export const Shopping=()=>{
 
     const {articlesInfo,panierArticlesInfo}=useSelector((state)=>state.counter)
@@ -23,7 +27,7 @@ export const Shopping=()=>{
             
         })
 
-     },[articlesInfo])   
+     },[articlesInfo,dispatch])   
 
     
     let globalePrice=0
@@ -41,8 +45,9 @@ export const Shopping=()=>{
                             {cardList} 
                         </div>
                     </div>
-                :<h1 id="empty_card">Panier Vide</h1>
+                :<div id="empty_card"><h1 >Panier Vide</h1></div>     
                 }
+                <Footer/>
             
         </>) 
 }

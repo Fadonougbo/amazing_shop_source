@@ -1,10 +1,11 @@
-import React,{ useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from '@hookform/resolvers/zod';
 import {z} from 'zod';
 import { useDispatch, useSelector } from "react-redux";
 import {addArticleOrChangeQuantity,incrementPanierCounter } from "../../reducer/store.js";
 import { RateStar } from "./RateStar.jsx";
+import { Alerte } from "./Alerte.jsx";
 
 /**
  * 
@@ -13,10 +14,6 @@ import { RateStar } from "./RateStar.jsx";
  * @returns JSX.Element
  */
 export const Article=({info,path})=>{
-
-
-    const [errorMessageClassName,setErrorMessageClassName]=useState("errorMessage")
-    const [errorStatus,setErrorStatus]=useState(null)
 
     const {name,img,price,quantity_available}=info
 
@@ -40,39 +37,22 @@ export const Article=({info,path})=>{
     const {register,handleSubmit,formState:{errors}}=useForm({
 
         resolver:zodResolver(shema)
-        //mode:"onTouched"
     
     })
 
-    const {quantity}=errors
-
     const submit=(data)=>{
-
         const {quantity}=data
-        setErrorStatus(false)
         dispatch(addArticleOrChangeQuantity({quantity,img,name,price,path}))
         dispatch(incrementPanierCounter())
         
     }
- 
-    const testClick=()=>{
-            setErrorMessageClassName("errorMessage error")
-
-            setTimeout(()=>{
-                setErrorMessageClassName("errorMessage")
-            },3000)
-    }
-
-    
-
 
 
     return (
 
         <div className="article" >
             <span id="price" >{price} $</span>
-            <div className={Object.hasOwn(errors,"quantity")?"errorMessage error":"errorMessage"} ><p>{quantity?.message}</p></div>
-            
+            <Alerte errors={errors}  />
             <section className="imgContainer" >
                 <img src={`pictures/${path}/${img}`} alt="" />
             </section>
@@ -86,7 +66,7 @@ export const Article=({info,path})=>{
                     <form action="" onSubmit={handleSubmit(submit)}>
                         <div className="quantityInfo" >
                             <input type="number" id="quantity" min="1" defaultValue={currentArticleFromStore?.quantity||1} {...register("quantity")} />
-                            <button onClick={testClick} ><span>Add to card</span> <img src="pictures/utiles/add.svg" alt="" /></button>
+                            <button><span>Add to card</span> <img src="pictures/utiles/add.svg" alt="" /></button>
                         </div>
                     </form>
                 </section>

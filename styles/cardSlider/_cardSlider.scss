@@ -1,23 +1,17 @@
 #card_slider
 {
     margin-bottom: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.banner{
-
-    width: 30rem;
-    height: 30rem;
-    background-position: top left ;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.banner_1
+.p_slider 
 {
-    background-image: url(/pictures/banner-1.png);
+    width:50%;
+    img
+    {
+        width: 100%;
+    }
 }
 
-.banner_2
-{
-    background-image: url(/pictures/banner-2.png);
-}
