@@ -27,7 +27,7 @@ export const CardSlider=()=>{
                 <div className="glide p_slider">
                     <div className="glide__track"  data-glide-el="track">
                         <section className="glide__slides">
-                            <section className="glide__slide">
+                            <section className="glide__slide p_container">
                                 <img  src="pictures/category-1.png" alt="" />
                             </section>
                             <section className="glide__slide">

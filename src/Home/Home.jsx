@@ -34,7 +34,7 @@ export const Home=()=>{
 
     return (
         <>  
-               { <CardSlider/>}
+               {/* <CardSlider/> */}
                 <MainView>
                     <cardContext.Provider value={[changeCurrentCard,currentCategorieName]}>
                         <Aside/> 
