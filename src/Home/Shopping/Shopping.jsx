@@ -47,7 +47,6 @@ export const Shopping=()=>{
                     </div>
                 :<div id="empty_card"><h1 >Panier Vide</h1></div>     
                 }
-                <Footer/>
             
         </>) 
 }

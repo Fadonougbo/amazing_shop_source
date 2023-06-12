@@ -29,28 +29,37 @@ export const CardSlider=()=>{
                     <div className="glide__track"  data-glide-el="track">
                         <section className="glide__slides">
                             <section className="glide__slide perso_container">
-                                <div>
+                                <div className="info_container">
                                     <h2>-50% sur tous vos achats</h2>
                                     <p><em>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam doloribus accusamus commodi, error veniam alias laudantium dolorem praesentium cupiditate obcaecati tempora aperiam, culpa labore porro! Consectetur quis esse error totam?</em></p>
                                     <a href="#">visiter</a>
                                 </div>
-                                <img  src="pictures/carousel/flash-1.png" alt="" />
+                                <div className="img_container">
+                                    <img  src="pictures/carousel/flash-1.png" alt="" />
+                                </div>
+                                
                             </section>
                             <section className="glide__slide perso_container">
-                                <div>
+                                <div className="info_container">
                                     <h2>-50% sur tous vos achats</h2>
                                     <p><em>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam doloribus accusamus commodi, error veniam alias laudantium dolorem praesentium cupiditate obcaecati tempora aperiam, culpa labore porro! Consectetur quis esse error totam?</em></p>
                                     <a href="#">visiter</a>
                                 </div>
-                                <img  src="pictures/carousel/flash-2.png" alt="" />
+                                <div className="img_container">
+                                    <img  src="pictures/carousel/flash-2.png" alt="" />
+                                </div>
+                                
                             </section>
                             <section className="glide__slide perso_container">
-                                <div>
+                                <div className="info_container">
                                     <h2>-50% sur tous vos achats</h2>
                                     <p><em>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam doloribus accusamus commodi, error veniam alias laudantium dolorem praesentium cupiditate obcaecati tempora aperiam, culpa labore porro! Consectetur quis esse error totam?</em></p>
                                     <a href="#">visiter</a>
                                 </div>
-                                <img  src="pictures/carousel/flash-3.png" alt="" />
+                                <div className="img_container">
+                                    <img  src="pictures/carousel/flash-3.png" alt="" />
+                                </div>
+                                
                             </section>
                         </section>
                     </div>
