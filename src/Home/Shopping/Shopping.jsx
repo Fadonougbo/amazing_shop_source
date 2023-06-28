@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { ShopCard } from "./ShopCard.jsx";
 import {setArticlePrice } from "../../reducer/store.js";
 import { Buy } from "./Buy.jsx";
-import { Footer } from "../Footer/Footer.jsx";
 
 /**
  * Composant pour afficher un  element du panier

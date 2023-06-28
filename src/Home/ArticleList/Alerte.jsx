@@ -1,31 +1,30 @@
-import React,{ useCallback,useState} from "react"
+import React,{useState} from "react"
+import { useRef } from "react"
+import { useEffect } from "react"
 
 export const Alerte=({errors})=>{
 
     const {quantity}=errors
 
     const [basicErrorClass,setBasicErrorClass]=useState("errorMessage")
-    const [errorStatus,setErrorStatus]=useState(false)
 
-    const alerteMessage=useCallback(()=>{
-        if(Object.hasOwn(errors,"quantity") && errorStatus===false)
+    const xRef=useRef()
+
+    useEffect(()=>{
+
+        if(Object.hasOwn(errors,"quantity"))
         {
             setBasicErrorClass("errorMessage error")
 
             setTimeout(()=>
-            {
+            {   
                 setBasicErrorClass("errorMessage")
-            },6000)
 
-            setErrorStatus(true)
-        }else if(!Object.hasOwn(errors,"quantity") && errorStatus===true)
-        {
-            setErrorStatus(false)
+            },2000)
+
         }
 
-    },[errors,errorStatus])
-
-    alerteMessage()
+    },[errors])
     
-  return <div className={basicErrorClass}><p>{quantity?.message}</p></div>
+  return <div  ref={xRef} className={basicErrorClass} ><p>{quantity?.message}</p></div>
 }

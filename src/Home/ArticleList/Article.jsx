@@ -10,7 +10,7 @@ import { Alerte } from "./Alerte.jsx";
 /**
  * 
  * Represante un article d'une categorie
- * @param {element info,path info} param0 
+ * 
  * @returns JSX.Element
  */
 export const Article=({info,path})=>{
