@@ -11,8 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
-
 helper.txt
+package2.json
 
 # Editor directories and files
 .vscode/*
