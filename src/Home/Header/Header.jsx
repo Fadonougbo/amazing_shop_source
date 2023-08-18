@@ -3,7 +3,6 @@ import React from "react";
 import { Seach } from "./Seach";
 import { Counter } from "./Counter";
 import { Navigation } from "./Navigation";
-import { Outlet } from "react-router-dom";
 
 /**
  * 
@@ -26,7 +25,6 @@ export const Header=()=>{
                 </div>
                 <Navigation/>
             </header>
-            <Outlet/>
         </>
 
     )

@@ -5,8 +5,7 @@
 {
     font-size: 3rem;
     text-align: center;
-    height: 59vh;
-    
+    flex-grow: 1;
 }
 
 #panier_content
@@ -14,6 +13,7 @@
     width:100%;
     padding: 1.2rem;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
 
     #article_list

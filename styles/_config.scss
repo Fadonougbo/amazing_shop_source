@@ -26,3 +26,9 @@ html
 {
     font-size: 62.5%;
 }
+
+#app {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}

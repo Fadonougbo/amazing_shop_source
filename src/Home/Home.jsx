@@ -5,7 +5,6 @@ import { Aside } from "./Aside/Aside";
 import { MainView } from "./MainView";
 import { ArticleList } from "./ArticleList/ArticleList.jsx";
 import { createContext } from "react";
-import { Footer } from "./Footer/Footer.jsx";
 
 /**
  * Context qui envoie la function changeCurrentCard
@@ -41,7 +40,6 @@ export const Home=()=>{
                     </cardContext.Provider>
                         <ArticleList currentCategorie={currentCategorieName} />
                 </MainView>
-                <Footer/>
         </>
         
     )

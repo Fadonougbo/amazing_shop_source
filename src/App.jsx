@@ -1,12 +1,13 @@
 /* eslint-disable @babel/object-curly-spacing */
 import React from "react";
 import {createRoot} from "react-dom/client"
-import { Home } from "../src/Home/Home";
+import { Home } from "./Home/Home.jsx";
 import { Routes,Route,BrowserRouter } from "react-router-dom";
-import { Header } from "../src/Home/Header/Header.jsx";
-import { store } from "../src/reducer/store.js";
+import { Header } from "./Home/Header/Header.jsx";
+import { store } from "./reducer/store.js";
 import { Provider } from "react-redux";
-import { Shopping } from "../src/Home/Shopping/Shopping.jsx";
+import { Shopping } from "./Home/Shopping/Shopping.jsx";
+import { Footer } from "./Home/Footer/Footer.jsx";
 
 /**
  * Composant principale
@@ -16,14 +17,16 @@ const App=()=>{
 
     return(
         <Provider store={store} >
+            
             <BrowserRouter>
+                <Header/>
                 <Routes>
-                    <Route path="/" element={<Header/>} >
-                        <Route  path="/" element={<Home/>} />
-                        <Route path="shopping" element={<Shopping/>} />
-                    </Route>
+                    <Route path="/" element={<Home/>} />
+                    <Route path="shopping" element={<Shopping/>} />
                 </Routes>
+                <Footer/>
             </BrowserRouter>
+
         </Provider>
         
     ) 
